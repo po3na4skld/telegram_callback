@@ -6,7 +6,7 @@ class TelegramCallback(Callback):
 
     def __init__(self, username):
         super(TelegramCallback, self).__init__()
-        self.token = '777234481:AAERTylbFtBOhF1wfmXTht0O3JwRqXcoiAk'
+        self.token = 'your bot token'
         res = requests.get("https://api.telegram.org/bot{}/getUpdates".format(self.token))
         jsn = res.json()['result']
         for updt in jsn:
